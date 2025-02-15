@@ -1,2 +1,2 @@
-# Websquatch.github.io
+# PenguinPotPi.github.io
 Part portfolio, part sandbox
