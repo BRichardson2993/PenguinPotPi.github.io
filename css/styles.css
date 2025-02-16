@@ -38,6 +38,7 @@ header {
 }
 
 .cabinet {
+    display: flex;
     padding: 60px;
     text-align: center;
     /* display: flex;
