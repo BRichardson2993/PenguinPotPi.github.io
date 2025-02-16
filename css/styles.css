@@ -60,47 +60,18 @@ header {
 }
 
 .drawer-photos {
-    transform: rotate(-7deg);
-    animation-name: floating;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 }
 
 .drawer-media {
-    transform: rotate(10deg);
-    animation-name: floating;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
 }
 
 .drawer-portfolio {
-    transform: rotate(-4deg);
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
 }
 
 .drawer-wellness {
-    transform: rotate(3deg);
-    animation-name: floating;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
 }
 
 .drawer-sandbox {
-    transform: rotate(8deg);
-    animation-name: floating;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
 }
 
 
