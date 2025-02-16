@@ -1,2 +1,2 @@
 # PenguinPotPi.github.io
-Part portfolio, part sandbox
+Part portfolio, part sandbox, part ramblings
