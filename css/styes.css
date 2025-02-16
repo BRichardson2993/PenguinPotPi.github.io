@@ -11,7 +11,7 @@ header {
 }
 
 #PPPLogo {
-    height: 300px;
+    height: 100px;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
