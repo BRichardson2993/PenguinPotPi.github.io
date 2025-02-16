@@ -43,6 +43,7 @@ header {
     overflow: hidden;
     display: flex;
     justify-self: self-start;
+    list-style: none;
 }
 
 .drawer {
