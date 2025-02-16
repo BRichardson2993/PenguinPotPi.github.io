@@ -1,0 +1,213 @@
+body {
+    background: #F2F2F2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #88CBDE;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+}
+
+#PPPLogo {
+    height: 200px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% { 
+        transform: translate(0,  0px); 
+    }
+    50%  { 
+        transform: translate(5px, 5px); 
+    }
+    100%   {
+        transform: translate(0, -0px);
+    }    
+}
+
+#cabinets {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.cabinet {
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-self: self-start;
+    list-style: none;
+}
+
+.drawer {
+    height: 150px;
+    width: 150px;
+    border: 5px solid #4D5A73;
+    border-radius: 15px;
+    margin: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background: white;
+    margin-top: 60px;
+}
+
+.drawer-photos {
+    transform: rotate(-7deg);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.drawer-media {
+    transform: rotate(10deg);
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.drawer-portfolio {
+    transform: rotate(-4deg);
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.drawer-wellness {
+    transform: rotate(3deg);
+    animation-name: floating;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.drawer-sandbox {
+    transform: rotate(8deg);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+/*******************  WebSquatch *******************
+
+
+/*************************************
+
+Color Palette
+
+Light Blue:	#00aeef	rgb(0, 174, 239)
+Dark Blue:	#1c75bc	rgb(28, 117, 188)
+Orange:	 		#f7941e	rgb(247, 148, 30)
+Green:			#82c341	rgb(130,195,65)
+Grey:				#666		rgb(102,102,102)
+
+Fonts: 
+	Anton
+	Montserrat
+	Fugaz One
+
+**************************************/
+
+
+
+/* Global Styles */
+
+body {
+	max-width: 1366px;
+	margin: 0 auto;
+	font-family: montserrat, sans-serif;
+}
+
+#logo {
+	max-width: 30%;
+	display: inline;
+	float: left;
+	margin: 2% 0 0 3%;
+}
+
+#banner {
+	height: 300px;
+	width: 100%;
+	background: #1c75bc;
+}
+
+#tagline {
+	position: absolute;
+	font-family: Fugaz One, sans-serif;
+	color: white;
+	font-size: 4em;
+	letter-spacing: .05em;
+	text-align: center;
+	padding-left: 35%;
+}
+
+nav {
+	display: inline;
+	max-width: 60%;
+	padding-right: 10%;
+}
+
+.navIcon {
+	display: inline-block;
+    vertical-align: top;
+	max-width: 9%;
+	margin-left: 5%;
+	margin-top: 235px
+}
+
+
+.work {
+    max-width: 10%;
+}
+
+.contact {
+   	max-width: 13%;
+    margin-left: 3%;
+}
+
+#wrapper {
+    margin: 15% 5%;
+    height: 300px;
+}
+
+
+footer {
+	height: 400px;
+	border: 1px solid red;
+	background-image: url('images/footer.png');
+	font-family: montserrat, sans-serif;
+	color: white;
+}
+
+footer p {
+    margin: 25% 0 0 3%;
+}
+
+
+/* Media queries */
+
+@media (max-width: 960px) {}
+
+@media (min-width: 768px) {}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+@media (max-width: 480px) {}
