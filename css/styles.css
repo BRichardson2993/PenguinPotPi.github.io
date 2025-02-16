@@ -38,22 +38,21 @@ header {
 }
 
 .cabinet {
-    display: flex;
-    padding: 60px;
+    padding: 10px;
     text-align: center;
-    /* display: flex;
-    flex-direction: row; */
     overflow: hidden;
+    display: flex;
+    justify-self: self-start;
 }
 
 .drawer {
-    display: inline-block;
+   isplay: inline-block;
     height: 150px;
     width: 150px;
-    border: 20px solid #4D5A73;
+    border: 10px solid #4D5A73;
     border-radius: 50px;
     margin: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .drawer-faith {
