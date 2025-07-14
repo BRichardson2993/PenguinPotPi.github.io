@@ -1,16 +1,47 @@
 body {
     background: #F2F2F2;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
-header {
+/* header {
     background: #88CBDE;
     width: 100%;
     height: 200px;
     display: flex;
     overflow: hidden;
-}
+} */
+
+.wave-header {
+    display: flex;
+    width: 100%; /* Adjust as needed */
+    height: 225px; /* Adjust as needed */
+    background-color: #88CBDE; /* Example background color */
+    position: relative;
+    overflow: hidden; /* Important to clip the wave */
+  }
+  
+  .wave-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust wave height */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,56C481,116,751,1,1200,56L1200,120L0,120Z" style="fill:%23ffffff;"/></svg>') repeat-x; /* White wave, change fill color as needed */
+    background-size: 1200px 50px; /* Match viewBox width and height */
+  }
+  
+  /* Optional: Additional styling for header content */
+  .wave-header h1, .wave-header p {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+  }
+
 
 #PPPLogo {
     height: 200px;
@@ -34,13 +65,13 @@ header {
     }    
 }
 
-#cabinets {
+#cabinet {
     width: 85%;
     margin: 0 auto;
 }
 
-.cabinet {
-    padding: 10px;
+.drawers {
+    padding:20px;
     text-align: center;
     overflow: hidden;
     display: flex;
@@ -49,30 +80,28 @@ header {
 }
 
 .drawer {
-    height: 150px;
+    height: 100px;
     width: 150px;
     border: 5px solid #4D5A73;
     border-radius: 15px;
-    margin: 8px;
+    margin: 17px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     background: white;
-    margin-top: 60px;
+    margin-top: 124px;
 }
 
-.drawer-photos {
+.drawer-about {
+    transform: rotate(5deg);
 }
 
-.drawer-media {
+.drawer-icebox {
+    transform: rotate(-4deg);
 }
 
-.drawer-portfolio {
+.drawer-github {
+    transform: rotate(2deg);
 }
 
-.drawer-wellness {
-}
-
-.drawer-sandbox {
-}
 
 
 /*******************  WebSquatch *******************
@@ -100,13 +129,12 @@ Fonts:
 /* Global Styles */
 
 body {
-	max-width: 1366px;
 	margin: 0 auto;
 	font-family: montserrat, sans-serif;
 }
 
 #logo {
-	max-width: 30%;
+	max-width: 130%;
 	display: inline;
 	float: left;
 	margin: 2% 0 0 3%;
