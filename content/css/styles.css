@@ -14,93 +14,158 @@ body {
 
 .wave-header {
     display: flex;
-    width: 100%; /* Adjust as needed */
-    height: 225px; /* Adjust as needed */
-    background-color: #88CBDE; /* Example background color */
+    width: 100%;
+    /* Adjust as needed */
+    height: 225px;
+    /* Adjust as needed */
+    background-color: #88CBDE;
+    /* Example background color */
     position: relative;
-    overflow: hidden; /* Important to clip the wave */
-  }
-  
-  .wave-header::after {
+    overflow: hidden;
+    /* Important to clip the wave */
+}
+
+.wave-header::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Adjust wave height */
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,56C481,116,751,1,1200,56L1200,120L0,120Z" style="fill:%23ffffff;"/></svg>') repeat-x; /* White wave, change fill color as needed */
-    background-size: 1200px 50px; /* Match viewBox width and height */
-  }
-  
-  /* Optional: Additional styling for header content */
-  .wave-header h1, .wave-header p {
+    height: 50px;
+    /* Adjust wave height */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,56C481,116,751,1,1200,56L1200,120L0,120Z" style="fill:%23ffffff;"/></svg>') repeat-x;
+    /* White wave, change fill color as needed */
+    background-size: 1200px 50px;
+    /* Match viewBox width and height */
+}
+
+/* Optional: Additional styling for header content */
+.wave-header h1,
+.wave-header p {
     text-align: center;
     color: white;
     position: relative;
     z-index: 1;
     margin: 0;
     padding: 10px;
-  }
+}
 
 
 #PPPLogo {
     height: 200px;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
     margin-left: 30px;
     margin-top: 5px;
 }
 
+/* Create a single, more fluid floating keyframe */
 @keyframes floating {
-    0% { 
-        transform: translate(0,  0px); 
+
+    0%,
+    100% {
+        transform: translate(var(--x-start, 0), var(--y-start, 0)) rotate(var(--r-start, 0deg));
     }
-    50%  { 
-        transform: translate(5px, 5px); 
+
+    50% {
+        transform: translate(var(--x-mid, 0), var(--y-mid, 0)) rotate(var(--r-mid, 0deg));
     }
-    100%   {
-        transform: translate(0, -0px);
-    }    
+}
+
+/* Base styles for all floating containers */
+.floating-container {
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Customize each container using unique CSS variables */
+
+
+.floating-about {
+    --x-start: 0px;
+    --y-start: 0px;
+    --r-start: -3deg;
+    --x-mid: 5px;
+    --y-mid: 25px;
+    --r-mid: 5deg;
+    animation-duration: 5s;
+    animation-delay: 1.2s;
+    background: url("/images/about.png") no-repeat;
+    margin-top: 50px;
+    scale: .8;
+}
+
+.floating-works {
+    --x-start: 0px;
+    --y-start: 0px;
+    --r-start: 3deg;
+    --x-mid: 5px;
+    --y-mid: 25px;
+    --r-mid: -5deg;
+    animation-duration: 4.5s;
+    animation-delay: 2.1s;
+    background: url("/images/works.png") no-repeat;
+    margin-top: 60px;
+    scale: .75;
+}
+
+.floating-blog {
+    --x-start: 0px;
+    --y-start: 0px;
+    --r-start: 7deg;
+    --x-mid: 5px;
+    --y-mid: 25px;
+    --r-mid: -3deg;
+    animation-duration: 6s;
+    animation-delay: 0.9s;
+    background: url("/images/blog.png") no-repeat;
+    margin-top: 40px;
+    scale: .85;
+}
+
+.floating-contact {
+    --x-start: 0px;
+    --y-start: 0px;
+    --x-mid: 5px;
+    --y-mid: 5px;
+    animation-duration: 5s;
+    animation-delay: 1.5s;
+    background: url("/images/contact.png") no-repeat;
+    margin-top: 50px;
+    scale: .77;
+}
+
+.floating-github {
+    --x-start: 5px;
+    --y-start: 25px;
+    --r-start: -7deg;
+    --x-mid: 0px;
+    --y-mid: 0px;
+    --r-mid: 5deg;
+    animation-duration: 5.5s;
+    animation-delay: 0.2s;
+    background: url("/images/github.png") no-repeat;
+    margin-top: 40px;
+    scale: .79;
 }
 
 #cabinet {
-    width: 85%;
-    margin: 0 auto;
+    display: flex;
+    width: 100%;
 }
 
 .drawers {
-    padding:20px;
+    padding: 20px;
     text-align: center;
-    overflow: hidden;
     display: flex;
-    justify-self: self-start;
+    align-content: flex-start;
     list-style: none;
 }
 
 .drawer {
-    height: 100px;
-    width: 150px;
-    border: 5px solid #4D5A73;
-    border-radius: 15px;
-    margin: 17px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    background: white;
-    margin-top: 124px;
+    height: 200px;
+    width: 185px;
 }
 
-.drawer-about {
-    transform: rotate(5deg);
-}
-
-.drawer-icebox {
-    transform: rotate(-4deg);
-}
-
-.drawer-github {
-    transform: rotate(2deg);
-}
 
 
 
@@ -129,45 +194,45 @@ Fonts:
 /* Global Styles */
 
 body {
-	margin: 0 auto;
-	font-family: montserrat, sans-serif;
+    margin: 0 auto;
+    font-family: montserrat, sans-serif;
 }
 
 #logo {
-	max-width: 130%;
-	display: inline;
-	float: left;
-	margin: 2% 0 0 3%;
+    max-width: 130%;
+    display: inline;
+    float: left;
+    margin: 2% 0 0 3%;
 }
 
 #banner {
-	height: 300px;
-	width: 100%;
-	background: #1c75bc;
+    height: 300px;
+    width: 100%;
+    background: #1c75bc;
 }
 
 #tagline {
-	position: absolute;
-	font-family: Fugaz One, sans-serif;
-	color: white;
-	font-size: 4em;
-	letter-spacing: .05em;
-	text-align: center;
-	padding-left: 35%;
+    position: absolute;
+    font-family: Fugaz One, sans-serif;
+    color: white;
+    font-size: 4em;
+    letter-spacing: .05em;
+    text-align: center;
+    padding-left: 35%;
 }
 
 nav {
-	display: inline;
-	max-width: 60%;
-	padding-right: 10%;
+    display: inline;
+    max-width: 60%;
+    padding-right: 10%;
 }
 
 .navIcon {
-	display: inline-block;
+    display: inline-block;
     vertical-align: top;
-	max-width: 9%;
-	margin-left: 5%;
-	margin-top: 235px
+    max-width: 9%;
+    margin-left: 5%;
+    margin-top: 235px
 }
 
 
@@ -176,7 +241,7 @@ nav {
 }
 
 .contact {
-   	max-width: 13%;
+    max-width: 13%;
     margin-left: 3%;
 }
 
@@ -187,11 +252,11 @@ nav {
 
 
 footer {
-	height: 400px;
-	border: 1px solid red;
-	background-image: url('images/footer.png');
-	font-family: montserrat, sans-serif;
-	color: white;
+    height: 400px;
+    border: 1px solid red;
+    background-image: url('images/footer.png');
+    font-family: montserrat, sans-serif;
+    color: white;
 }
 
 footer p {
